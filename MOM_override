@@ -1,0 +1,34 @@
+! Blank file in which we can put "overrides" for parameters
+! VERBOSITY=9
+#override DT = 720.       		! timestep: in seconds
+#override DT_FORCING = 3600.
+#override DAYMAX = 171668.		! total number of days of simulation
+#override LENLAT = 35.0
+#override NIGLOBAL = 600		! 1 deg resolution
+#override NJGLOBAL = 550 
+#override TOPO_CONFIG = "channel6"	! includes continental slopes
+#override SPONGE_CONFIG = "channel6"
+#override CHANNEL_DRAG = False
+#override THICKNESSDIFFUSE = False	! GM turned on
+! #override KHTH = 700
+! surface property control
+#override HMIX_FIXED = 100.0            ! the depth of sfc mixed layer over which homogeneous
+                                        ! mixing and wind stress occur
+#override HMIX_SFC_PROP = 100.0         ! the depth over which sfc density is averaged
+#override HMIX_UV_SFC_PROP = 100.0      ! same but for velocity
+
+#override AH_VEL_SCALE = 0.05		! biharmonic viscosity
+#override FLUXCONST = 2.0		! piston velocity
+#override MINIMUM_DEPTH = 0.0
+#override BUOY_CONFIG = "channel4"	! updated surface buoyancy forcing
+#override WIND_CONFIG = "channel4"
+#override SPONGE = True
+#override KD = 5.0E-05			! diapycnal diffusivity
+#override COORD_FILE = "coordinate8a.nc" ! use the most updated rho 3 class
+#override RESTINT = 3652.5
+#override ENERGYSAVEDAYS = 365.25
+#override MAXTRUNC = 10000
+#override THICKNESS_CONFIG = "file"
+#override THICKNESS_FILE = "etacn6p1.nc"
+#override ADJUST_THICKNESS = True
+#override RESTART_CHECKSUMS_REQUIRED = False

@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=cn6p1tp2
+#SBATCH --output=cn6p1tp2.out
+#SBATCH --error=cn6p1tp2.err
+#SBATCH --partition=mfj
+#SBATCH --nodes=4
+#SBATCH --ntasks-per-node=28
+#SBATCH --mem-per-cpu=2000
+
+ulimit -s 30000
+mpirun -n 112 /project2/mfj/Hailu/MOM6_tp2_nMEKE/build/intel/ocean_only/repro/MOM6
